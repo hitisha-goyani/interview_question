@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+</body>
+<script>
+
+
+
+// function timer(t){
+//     let count = 0
+//    let interval = setInterval(function(){
+//         count++
+//         console.log("print ", count)
+//         if(count > 5){
+//             clearInterval(interval)
+//         }
+//     }, t)
+
+//     // setTimeout(function(){
+//     //      clearInterval(interval)
+//     // }, 10000)
+// }
+
+// timer(500)
+
+
+function fun(){
+    
+
+    let promiss = new Promise((resolve, reject)=>{
+        setTimeout(function(){
+            resolve()
+    }, 2000)
+    })
+
+    return promiss
+}
+
+ 
+
+ async function fetchData(){
+    console.log("first")
+    await fun();
+    console.log("second")
+}
+
+fetchData()
+
+</script>
+
+
+<script>
+
+function repeat(){
+
+}
+
+repeat(str, ignore)
+    let str = "this is the test, this test is hard"
+    let ignore = "this"
+
+
+    
+</script>
+
+
+
+</html>

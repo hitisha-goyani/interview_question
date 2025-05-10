@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .box{
+            padding: 30px;
+            background:gainsboro;
+        }
+
+        .box >div{
+            padding:30px;
+            background: gray;
+        }
+
+        .box > div > div{
+            padding: 30px;
+            background-color: lightblue;
+        }
+        
+    </style>
+</head>
+<body>
+
+
+    <!-- event bubbling  -->
+
+    <div class="box" id="outer">
+        <div id="middle">
+            <div id="inner">
+                <button id="btn">btn</button>
+            </div>
+        </div>
+    </div>
+    
+</body>
+
+<script>
+//     document.getElementById("outer").addEventListener("click",  function(e){
+//         console.log("outer..!")
+//     },
+//     true
+//     )
+//     document.getElementById("middle").addEventListener("click",  function(e){
+        
+//         console.log("middle..!")
+//     },
+//     true
+//     )
+
+//     document.getElementById("inner").addEventListener("click",  function(e){
+//         console.log("inner..!")
+//          //  e.stopPropagation()
+//     },
+//     true
+//     )
+
+//     document.getElementById("btn").addEventListener("click",  function(e){
+       
+//         console.log("btn..!")
+//     },
+//     true
+// )
+// </script>
+
+<script>
+    document.getElementById("outer").addEventListener("click",  function(e){
+        console.log("outer..!")
+    }
+    )
+    document.getElementById("middle").addEventListener("click",  function(e){
+        // e.stopImmediatePropagation()
+        console.log("middle..!")
+    }
+    )
+
+    document.getElementById("inner").addEventListener("click",  function(e){
+        //  e.stopImmediatePropagation()
+        console.log("inner..!")
+          e.stopPropagation()
+    }
+    )
+
+    document.getElementById("btn").addEventListener("click",  function(e){
+       
+        console.log("btn..!")
+    }
+)
+</script>
+
+</html>
